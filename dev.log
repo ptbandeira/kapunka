@@ -6,9 +6,9 @@
 > Ready on http://localhost:3000
 > Socket.IO server running at ws://localhost:3000/api/socketio
  ○ Compiling /middleware ...
- ✓ Compiled /middleware in 1082ms (137 modules)
+ ✓ Compiled /middleware in 1238ms (137 modules)
  ○ Compiling /[locale] ...
- ✓ Compiled /[locale] in 8.2s (1085 modules)
+ ✓ Compiled /[locale] in 8.1s (1085 modules)
 Error: Route "/[locale]" used `params.locale`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
     at LocaleLayout (src/app/[locale]/layout.tsx:34:10)
   32 |   params: { locale: string };
@@ -18,4 +18,14 @@ Error: Route "/[locale]" used `params.locale`. `params` should be awaited before
   35 |   const messages = await getMessages();
   36 |
   37 |   return (
- GET / 404 in 10284ms
+Error: Route "/[locale]" used `params.locale`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at LocaleLayout (src/app/[locale]/layout.tsx:34:10)
+  32 |   params: { locale: string };
+  33 | }) {
+> 34 |   const { locale } = params;
+     |          ^
+  35 |   const messages = await getMessages();
+  36 |
+  37 |   return (
+ GET / 404 in 10228ms
+ GET / 404 in 3472ms
