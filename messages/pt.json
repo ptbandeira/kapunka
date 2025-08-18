@@ -1,0 +1,172 @@
+{
+  "navigation": {
+    "home": "Início",
+    "products": "Produtos",
+    "method": "O Método",
+    "story": "Nossa História",
+    "professionals": "Profissionais",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "title": "Cuidado sereno para pele sensível",
+      "subtitle": "Óleo de argão puro ensinado através de um método simples e disciplinado",
+      "description": "Kapunka oferece força silenciosa em uma garrafa. Óleo de argão de primeira prensagem, projetado para acalmar, suavizar e apoiar a barreira cutânea.",
+      "cta": "Descubra o Método"
+    },
+    "features": {
+      "pure": {
+        "title": "Origem Pura",
+        "description": "Óleo de argão de primeira prensagem de cooperativas de mulheres marroquinas"
+      },
+      "method": {
+        "title": "Cuidado Guiado por Método",
+        "description": "Aplicação simples e disciplinada para resultados consistentes"
+      },
+      "respect": {
+        "title": "Respeito pela Pele",
+        "description": "Formulação suave adequada para pele sensível"
+      }
+    },
+    "products": {
+      "title": "Nossos Produtos",
+      "subtitle": "Simples por escolha. Poderoso por natureza.",
+      "view_all": "Ver Todos os Produtos"
+    }
+  },
+  "products": {
+    "title": "Nossos Produtos",
+    "subtitle": "Óleo de argão puro para conforto diário",
+    "pure_argan_oil": {
+      "name": "Óleo de Argão Puro",
+      "description": "100% óleo de argão de primeira prensagem em garrafa de vidro transparente",
+      "size": "30ml",
+      "price": "€45",
+      "add_to_cart": "Adicionar ao Carrinho"
+    },
+    "professional_size": {
+      "name": "Tamanho Profissional",
+      "description": "Garrafa recarregável de 100ml para uso em spa e clínica",
+      "size": "100ml",
+      "price": "€120",
+      "add_to_cart": "Adicionar ao Carrinho"
+    },
+    "amenity_size": {
+      "name": "Amenidade de Hotel",
+      "description": "2ml tamanho perfeito para quartos de hotel e amostras",
+      "size": "2ml",
+      "price": "€8",
+      "add_to_cart": "Adicionar ao Carrinho"
+    }
+  },
+  "method": {
+    "title": "O Método Kapunka",
+    "subtitle": "Método simples. Resultados consistentes.",
+    "steps": {
+      "dose": {
+        "title": "Dosar",
+        "description": "3-5 gotas nas mãos limpas"
+      },
+      "warm": {
+        "title": "Aquecer",
+        "description": "Esfregar as palmas suavemente para espalhar e aquecer"
+      },
+      "press": {
+        "title": "Pressionar",
+        "description": "Colocar as mãos no rosto e pescoço com pressão suave"
+      },
+      "glide": {
+        "title": "Deslizar",
+        "description": "Toque leve-médio; evitar fricção em áreas sensibilizadas"
+      },
+      "pause": {
+        "title": "Pausar",
+        "description": "Deixar o acabado assentar; respirar"
+      }
+    },
+    "timing": "Manhã e noite em casa. O tempo após procedimentos em clínica é a critério do clínico.",
+    "hygiene": {
+      "title": "Regras de Higiene",
+      "clean_hands": "Mãos limpas; sem dupla imersão",
+      "disinfect_tools": "Desinfetar ferramentas",
+      "keep_droppers": "Manter os conta-gotas longe de tocar a pele"
+    }
+  },
+  "story": {
+    "title": "Nossa História",
+    "subtitle": "Força silenciosa. Cuidado puro.",
+    "founder": {
+      "title": "Fundadora: Mónica Ruiz",
+      "description": "Enfermeira e terapeuta manual; resiliente e gentil; atualmente estudando medicina.",
+      "quote": "Simples não é fácil. É uma escolha."
+    },
+    "essence": {
+      "title": "Essência da Marca",
+      "description": "Kapunka representa uma abordagem suave mas resiliente do cuidado da pele, entregando força e resultados de forma tranquila e calma, com ingredientes puros e métodos de cuidado."
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "purity": "Pureza e Simplicidade: As formulações e mensagens permanecem puras, naturais e sem complicações.",
+      "craft": "Artesanato e Origem: Honrar a produção artesanal e a origem do nosso óleo de argão.",
+      "dignity": "Dignidade e Respeito: Tratar o cliente, a cultura e a pele com respeito.",
+      "stewardship": "Administração: Fazer escolhas sustentáveis e conscientes.",
+      "consistency": "Consistência e Transparência: Ser consistentes em nossos métodos e abertos sobre nossos processos."
+    }
+  },
+  "professionals": {
+    "title": "Para Profissionais",
+    "subtitle": "Argão puro. Conforto guiado por método.",
+    "clinics": {
+      "title": "Clínicas e Medi-spas",
+      "description": "Óleo reconfortante que apoia a barreira cutânea. Perfeito para cuidado pós-procedimento.",
+      "features": [
+        "Guia rápido e regras de higiene incluídas",
+        "Kit de Conforto de 30ml para venda no balcão",
+        "Tempo após procedimentos a critério do clínico"
+      ]
+    },
+    "spas": {
+      "title": "Spas",
+      "description": "Argão puro. Conforto guiado por método para tratamentos.",
+      "features": [
+        "Garrafa de 100ml para uso profissional (~3ml/tratamento)",
+        "Cartão de protocolo incluído",
+        "Pacote tratamento + 30ml para venda"
+      ]
+    },
+    "hotels": {
+      "title": "Hotéis",
+      "description": "Calma depois da viagem. Leia o QR para saber como.",
+      "features": [
+        "Amenidade de 2-5ml com código QR",
+        "Testador e cartão de história para boutique",
+        "Linhas de menu de spa co-branded"
+      ]
+    },
+    "contact": "Entre em contato para preços profissionais e treinamento"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos aqui para ajudar",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem"
+    },
+    "info": {
+      "title": "Entre em Contato",
+      "email": "Email: info@kapunka.com",
+      "phone": "Telefone: +34 900 000 000",
+      "address": "Endereço: Calle Principal 1, Madrid, Espanha"
+    }
+  },
+  "footer": {
+    "about": "Sobre Kapunka",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "contact": "Contato",
+    "copyright": "© 2024 Kapunka. Todos os direitos reservados."
+  }
+}
