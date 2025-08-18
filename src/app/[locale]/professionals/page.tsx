@@ -3,12 +3,12 @@ import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  Building, 
-  Spa, 
-  Hotel, 
-  Mail, 
-  Phone, 
+import {
+  Building,
+  Flower2,
+  Hotel,
+  Mail,
+  Phone,
   Users,
   CheckCircle,
   Star,
@@ -33,7 +33,7 @@ export default function ProfessionalsPage({
       cta: 'Contact for Clinic Pricing'
     },
     {
-      icon: Spa,
+      icon: Flower2,
       title: t('professionals.spas.title'),
       description: t('professionals.spas.description'),
       features: t('professionals.spas.features'),
