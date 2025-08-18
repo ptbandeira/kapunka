@@ -3,25 +3,25 @@ import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  Building, 
-  Spa, 
-  Hotel, 
-  Mail, 
-  Phone, 
+import {
+  Building,
+  Spa,
+  Hotel,
+  Mail,
+  Phone,
   Users,
   CheckCircle,
   Star,
   ArrowRight
 } from 'lucide-react';
 
-export default function ProfessionalsPage({
+export default async function ProfessionalsPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
-  const { locale } = params;
+  const { locale } = await params;
 
   const professionalCategories = [
     {

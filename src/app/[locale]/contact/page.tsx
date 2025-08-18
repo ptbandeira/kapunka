@@ -1,96 +1,29 @@
-'use client';
-
-import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import ContactForm from './ContactForm';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock,
-  Send,
-  CheckCircle
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
-export default function ContactPage({
+export default async function ContactPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
-  const { locale } = params;
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
+  const { locale } = await params;
 
   const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'info@kapunka.com',
-      description: 'General inquiries and support'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+34 900 000 000',
-      description: 'Monday to Friday, 9:00 - 18:00'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: 'Calle Principal 1, Madrid, Spain',
-      description: 'By appointment only'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Mon - Fri: 9:00 - 18:00',
-      description: 'Weekend: Closed'
-    }
+    { icon: Mail, title: 'Email', value: 'info@kapunka.com', description: 'General inquiries and support' },
+    { icon: Phone, title: 'Phone', value: '+34 900 000 000', description: 'Monday to Friday, 9:00 - 18:00' },
+    { icon: MapPin, title: 'Address', value: 'Calle Principal 1, Madrid, Spain', description: 'By appointment only' },
+    { icon: Clock, title: 'Business Hours', value: 'Mon - Fri: 9:00 - 18:00', description: 'Weekend: Closed' }
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-background to-muted/20 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,90 +44,7 @@ export default function ContactPage({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div>
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl">{t('contact.form.send')}</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {isSubmitted ? (
-                    <div className="text-center py-8">
-                      <CheckCircle className="h-16 w-16 text-[var(--kapunka-sage-medium)] mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-                      <p className="text-muted-foreground">
-                        Thank you for contacting us. We'll get back to you within 24 hours.
-                      </p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div>
-                        <Label htmlFor="name">{t('contact.form.name')}</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="email">{t('contact.form.email')}</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="subject">{t('contact.form.subject')}</Label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          type="text"
-                          required
-                          value={formData.subject}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="message">{t('contact.form.message')}</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          required
-                          rows={6}
-                          value={formData.message}
-                          onChange={handleChange}
-                          className="mt-1"
-                        />
-                      </div>
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-[var(--kapunka-sage-medium)] hover:bg-[var(--kapunka-sage-medium)]/90"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? (
-                          'Sending...'
-                        ) : (
-                          <>
-                            {t('contact.form.send')}
-                            <Send className="ml-2 h-4 w-4" />
-                          </>
-                        )}
-                      </Button>
-                    </form>
-                  )}
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
 
             {/* Contact Information */}
@@ -231,26 +81,26 @@ export default function ContactPage({
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    <a 
-                      href={`/${locale}/professionals`} 
+                    <a
+                      href={`/${locale}/professionals`}
                       className="block text-sm text-muted-foreground hover:text-[var(--kapunka-sage-medium)] transition-colors"
                     >
                       Professional Partnerships →
                     </a>
-                    <a 
-                      href={`/${locale}/products`} 
+                    <a
+                      href={`/${locale}/products`}
                       className="block text-sm text-muted-foreground hover:text-[var(--kapunka-sage-medium)] transition-colors"
                     >
                       Product Information →
                     </a>
-                    <a 
-                      href={`/${locale}/method`} 
+                    <a
+                      href={`/${locale}/method`}
                       className="block text-sm text-muted-foreground hover:text-[var(--kapunka-sage-medium)] transition-colors"
                     >
                       The Kapunka Method →
                     </a>
-                    <a 
-                      href={`/${locale}/story`} 
+                    <a
+                      href={`/${locale}/story`}
                       className="block text-sm text-muted-foreground hover:text-[var(--kapunka-sage-medium)] transition-colors"
                     >
                       Our Story →
@@ -312,3 +162,4 @@ export default function ContactPage({
     </div>
   );
 }
+

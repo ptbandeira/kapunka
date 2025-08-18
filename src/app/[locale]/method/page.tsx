@@ -2,23 +2,24 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  Droplet, 
-  Hand, 
-  Touch, 
-  Move, 
-  Pause, 
-  Clock, 
-  Shield, 
-  CheckCircle 
+import {
+  Droplet,
+  Hand,
+  Touch,
+  Move,
+  Pause,
+  Clock,
+  Shield,
+  CheckCircle
 } from 'lucide-react';
 
-export default function MethodPage({
+export default async function MethodPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
+  const { locale } = await params;
 
   const steps = [
     {

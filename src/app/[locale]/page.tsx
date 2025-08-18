@@ -6,13 +6,13 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { ArrowRight, Droplet, Hand, Leaf } from 'lucide-react';
 
-export default function HomePage({
+export default async function HomePage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
-  const { locale } = params;
+  const { locale } = await params;
 
   return (
     <div className="min-h-screen flex flex-col">
