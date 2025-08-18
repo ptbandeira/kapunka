@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import {
   Droplet,
   Hand,
-  Touch,
   Move,
   Pause,
   Clock,
@@ -35,7 +34,7 @@ export default async function MethodPage({
       color: 'bg-[var(--kapunka-sage-medium)]'
     },
     {
-      icon: Touch,
+      icon: Pointer,
       title: t('method.steps.press.title'),
       description: t('method.steps.press.description'),
       color: 'bg-[var(--kapunka-taupe)]'
@@ -66,7 +65,7 @@ export default async function MethodPage({
       description: 'Keep all tools and surfaces properly sanitized'
     },
     {
-      icon: Touch,
+      icon: Pointer,
       title: t('method.hygiene.keep_droppers'),
       description: 'Prevent contamination by keeping droppers away from direct skin contact'
     }
