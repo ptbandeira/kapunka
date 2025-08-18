@@ -8,6 +8,22 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Prevent redirect loops for already localized paths
+[[redirects]]
+  from = "/en/*"
+  to = "/en/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/:splat"
+  status = 200
+
 # Redirect rules for internationalization
 [[redirects]]
   from = "/*"
