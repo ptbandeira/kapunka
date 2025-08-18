@@ -1,8 +1,17 @@
 import './globals.css';
-import { Geist, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+const geistSans = localFont({
+  src: '../../public/fonts/Geist-Regular.woff2',
+  variable: '--font-geist-sans',
+  weight: '400',
+});
+
+const geistMono = localFont({
+  src: '../../public/fonts/GeistMono-Regular.woff2',
+  variable: '--font-geist-mono',
+  weight: '400',
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
