@@ -1,12 +1,22 @@
-import { notFound } from 'next/navigation';
-import { getRequestConfig } from 'next-intl/server';
+import {getRequestConfig} from 'next-intl/server';
+import {routing} from './routing';
 
-const locales = ['en', 'es', 'pt'];
+export default getRequestConfig(async ({requestLocale}) => {
+  const requested = (await requestLocale) ?? routing.defaultLocale;
+  // Normalize region variants: en-GB -> en
+  const base = requested.split('-')[0];
 
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as any)) notFound();
+  const locale = (routing.locales as readonly string[]).includes(base)
+    ? (base as (typeof routing.locales)[number])
+    : routing.defaultLocale;
 
-  return {
-    messages: (await import(`../../messages/${locale}.json`)).default
-  };
+  // Try both common message paths
+  let messages: Record<string, any>;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch {
+    messages = (await import(`../messages/${locale}.json`)).default;
+  }
+
+  return {locale, messages};
 });

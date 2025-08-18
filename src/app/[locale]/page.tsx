@@ -7,10 +7,11 @@ import Link from 'next/link';
 import { ArrowRight, Droplet, Hand, Leaf } from 'lucide-react';
 
 export default async function HomePage({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   return (

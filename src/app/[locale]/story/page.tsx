@@ -5,10 +5,11 @@ import { getTranslations } from 'next-intl/server';
 import { User, Heart, Leaf, Shield, Globe, Scale, Quote } from 'lucide-react';
 
 export default async function StoryPage({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   const values = [

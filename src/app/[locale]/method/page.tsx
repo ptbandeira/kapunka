@@ -2,27 +2,28 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getTranslations } from 'next-intl/server';
-import { Droplet, Hand, Move, Pause, Clock, Shield, CheckCircle, Pointer } from 'lucide-react';
+import { Droplet, Hand, Move, Pause, Clock, Shield, CheckCircle, MousePointer } from 'lucide-react';
 
 export default async function MethodPage({
-  params: { locale }
+  params
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale });
 
   const steps = [
-    { icon: Droplet, title: t('method.steps.dose.title'),  description: t('method.steps.dose.description'),  color: 'bg-[var(--kapunka-sage-light)]' },
-    { icon: Hand,    title: t('method.steps.warm.title'),  description: t('method.steps.warm.description'),  color: 'bg-[var(--kapunka-sage-medium)]' },
-    { icon: Pointer, title: t('method.steps.press.title'), description: t('method.steps.press.description'), color: 'bg-[var(--kapunka-taupe)]' },
-    { icon: Move,    title: t('method.steps.glide.title'), description: t('method.steps.glide.description'), color: 'bg-[var(--kapunka-sage-light)]' },
-    { icon: Pause,   title: t('method.steps.pause.title'), description: t('method.steps.pause.description'), color: 'bg-[var(--kapunka-sage-medium)]' }
+    { icon: Droplet,      title: t('method.steps.dose.title'),  description: t('method.steps.dose.description'),  color: 'bg-[var(--kapunka-sage-light)]' },
+    { icon: Hand,         title: t('method.steps.warm.title'),  description: t('method.steps.warm.description'),  color: 'bg-[var(--kapunka-sage-medium)]' },
+    { icon: MousePointer, title: t('method.steps.press.title'), description: t('method.steps.press.description'), color: 'bg-[var(--kapunka-taupe)]' },
+    { icon: Move,         title: t('method.steps.glide.title'), description: t('method.steps.glide.description'), color: 'bg-[var(--kapunka-sage-light)]' },
+    { icon: Pause,        title: t('method.steps.pause.title'), description: t('method.steps.pause.description'), color: 'bg-[var(--kapunka-sage-medium)]' }
   ];
 
   const hygieneRules = [
-    { icon: Shield,     title: t('method.hygiene.clean_hands'),   description: 'Always start with clean hands to maintain product purity' },
-    { icon: CheckCircle,title: t('method.hygiene.disinfect_tools'),description: 'Keep all tools and surfaces properly sanitized' },
-    { icon: Pointer,    title: t('method.hygiene.keep_droppers'), description: 'Prevent contamination by keeping droppers away from direct skin contact' }
+    { icon: Shield,       title: t('method.hygiene.clean_hands'),   description: 'Always start with clean hands to maintain product purity' },
+    { icon: CheckCircle,  title: t('method.hygiene.disinfect_tools'),description: 'Keep all tools and surfaces properly sanitized' },
+    { icon: MousePointer, title: t('method.hygiene.keep_droppers'), description: 'Prevent contamination by keeping droppers away from direct skin contact' }
   ];
 
   return (

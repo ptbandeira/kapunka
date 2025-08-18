@@ -1,48 +1,34 @@
-import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import type {Metadata} from 'next';
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages, setRequestLocale} from 'next-intl/server';
+import {routing} from '../../i18n/routing';
+import {Toaster} from '@/components/ui/toaster';
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "es" }, { locale: "pt" }];
+  return routing.locales.map((locale) => ({locale}));
 }
 
 export const metadata: Metadata = {
-  title: "Kapunka - Quiet care for sensitive skin",
-  description:
-    "Pure argan oil taught through a simple, disciplined method for sensitive skin care.",
-  keywords: ["Kapunka", "argan oil", "sensitive skin", "skincare", "pure care"],
-  authors: [{ name: "Kapunka" }],
-  openGraph: {
-    title: "Kapunka - Quiet care for sensitive skin",
-    description:
-      "Pure argan oil taught through a simple, disciplined method for sensitive skin care.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kapunka - Quiet care for sensitive skin",
-    description:
-      "Pure argan oil taught through a simple, disciplined method for sensitive skin care.",
-  },
+  title: 'Kapunka - Quiet care for sensitive skin',
+  description: 'Pure argan oil taught through a simple, disciplined method for sensitive skin care.'
 };
 
 export default async function LocaleLayout({
   children,
-  params,
+  params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{locale: string}>;
 }) {
-  const { locale } = params;
+  const {locale} = await params;           // Next 15 requires awaiting params
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      {children}
+      <Toaster />
+    </NextIntlClientProvider>
   );
 }
