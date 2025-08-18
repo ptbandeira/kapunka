@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/health/route": "/api/health",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/admin/page": "/admin",
+  "/[locale]/contact/page": "/[locale]/contact",
+  "/[locale]/professionals/page": "/[locale]/professionals",
+  "/[locale]/products/page": "/[locale]/products",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/method/page": "/[locale]/method",
+  "/[locale]/story/page": "/[locale]/story"
+}
