@@ -28,7 +28,7 @@ export default async function ProfessionalsPage({
       icon: Building,
       title: t('professionals.clinics.title'),
       description: t('professionals.clinics.description'),
-      features: t('professionals.clinics.features'),
+      features: t.raw('professionals.clinics.features'),
       color: 'from-[var(--kapunka-sage-light)] to-[var(--kapunka-sage-medium)]',
       cta: 'Contact for Clinic Pricing'
     },
@@ -36,7 +36,7 @@ export default async function ProfessionalsPage({
       icon: Flower2,
       title: t('professionals.spas.title'),
       description: t('professionals.spas.description'),
-      features: t('professionals.spas.features'),
+      features: t.raw('professionals.spas.features'),
       color: 'from-[var(--kapunka-taupe)] to-[var(--kapunka-charcoal)]',
       cta: 'Contact for Spa Pricing'
     },
@@ -44,7 +44,7 @@ export default async function ProfessionalsPage({
       icon: Hotel,
       title: t('professionals.hotels.title'),
       description: t('professionals.hotels.description'),
-      features: t('professionals.hotels.features'),
+      features: t.raw('professionals.hotels.features'),
       color: 'from-[var(--kapunka-sage-light)] to-[var(--kapunka-taupe)]',
       cta: 'Contact for Hotel Pricing'
     }
