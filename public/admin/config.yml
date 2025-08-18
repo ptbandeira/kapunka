@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  # Site-level settings & images
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Site"
+        file: "src/config/site.json"
+        format: "json"
+        fields:
+          - { label: "Brand Name", name: "brandName", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", allow_multiple: false, choose_url: false }
+          - label: "Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "X (Twitter)", name: "x", widget: "string", required: false }
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero Image", name: "hero", widget: "image", required: false }
+              - { label: "Product Image (default)", name: "product", widget: "image", required: false }
+
+  # Theme tokens (easy color/layout tweaks)
+  - name: "theme"
+    label: "Theme"
+    files:
+      - name: "theme"
+        label: "Theme Tokens"
+        file: "src/config/theme.json"
+        format: "json"
+        fields:
+          - label: "Colors"
+            name: "colors"
+            widget: "object"
+            fields:
+              - { label: "Sage Light", name: "kapunkaSageLight", widget: "string", default: "#DDE7DF" }
+              - { label: "Sage Medium", name: "kapunkaSageMedium", widget: "string", default: "#6BA388" }
+              - { label: "Taupe", name: "kapunkaTaupe", widget: "string", default: "#8B786D" }
+              - { label: "Charcoal", name: "kapunkaCharcoal", widget: "string", default: "#2F2F2F" }
+
+  # Translations (edit raw JSON safely)
+  - name: "messages"
+    label: "Translations"
+    files:
+      - name: "en"
+        label: "English (en)"
+        file: "src/messages/en.json"
+        editor: { preview: false }
+        fields:
+          - { label: "JSON", name: "raw", widget: "code", allow_language: "json", output_code_only: true }
+      - name: "es"
+        label: "Spanish (es)"
+        file: "src/messages/es.json"
+        editor: { preview: false }
+        fields:
+          - { label: "JSON", name: "raw", widget: "code", allow_language: "json", output_code_only: true }
+      - name: "pt"
+        label: "Portuguese (pt)"
+        file: "src/messages/pt.json"
+        editor: { preview: false }
+        fields:
+          - { label: "JSON", name: "raw", widget: "code", allow_language: "json", output_code_only: true }

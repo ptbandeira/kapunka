@@ -1,0 +1,13 @@
+{
+  "brandName": "Kapunka",
+  "logo": "/images/logo.svg",
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "x": ""
+  },
+  "images": {
+    "hero": "/images/hero.jpg",
+    "product": "/images/product.jpg"
+  }
+}
