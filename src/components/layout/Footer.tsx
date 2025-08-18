@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 
-export default function Footer() {
+const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t">
@@ -54,4 +54,7 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
+export { Footer };
