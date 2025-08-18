@@ -3,29 +3,29 @@
 [33m[nodemon] watching path(s): server.ts src/**/*[39m
 [33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
 [32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
  ○ Compiling /middleware ...
- ✓ Compiled /middleware in 1633ms (137 modules)
+ ✓ Compiled /middleware in 1033ms (137 modules)
  ○ Compiling /[locale] ...
- ✓ Compiled /[locale] in 9.9s (1085 modules)
- GET / 307 in 12675ms
- GET / 307 in 84ms
- GET / 307 in 67ms
- GET / 307 in 60ms
+ ✓ Compiled /[locale] in 7.9s (1085 modules)
+ GET / 307 in 10069ms
+ GET / 307 in 85ms
  GET / 307 in 65ms
- GET / 307 in 209ms
- GET / 307 in 55ms
- GET / 307 in 60ms
- GET / 307 in 241ms
- GET / 307 in 78ms
- GET / 307 in 58ms
- GET / 307 in 57ms
- GET / 307 in 75ms
- GET / 307 in 41ms
- GET / 307 in 56ms
- GET / 307 in 60ms
- GET / 307 in 194ms
+ GET / 307 in 68ms
+ GET / 307 in 81ms
  GET / 307 in 79ms
- GET / 307 in 93ms
- GET / 307 in 47ms
+ GET / 307 in 63ms
+ GET / 307 in 117ms
+ GET / 307 in 105ms
+ GET / 307 in 69ms
+ GET / 307 in 89ms
+ GET / 307 in 54ms
+ GET / 307 in 46ms
+ GET / 307 in 76ms
+ GET / 307 in 78ms
+ GET / 307 in 72ms
+ GET / 307 in 77ms
+ GET / 307 in 52ms
+ GET / 307 in 46ms
+ GET / 307 in 69ms
