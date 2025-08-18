@@ -5,9 +5,9 @@
   "/page": "app/page.js",
   "/admin/page": "app/admin/page.js",
   "/[locale]/contact/page": "app/[locale]/contact/page.js",
-  "/[locale]/professionals/page": "app/[locale]/professionals/page.js",
-  "/[locale]/products/page": "app/[locale]/products/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
   "/[locale]/method/page": "app/[locale]/method/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/products/page": "app/[locale]/products/page.js",
+  "/[locale]/professionals/page": "app/[locale]/professionals/page.js",
   "/[locale]/story/page": "app/[locale]/story/page.js"
 }

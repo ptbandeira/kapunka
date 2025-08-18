@@ -5,9 +5,9 @@
   "/page": "/",
   "/admin/page": "/admin",
   "/[locale]/contact/page": "/[locale]/contact",
-  "/[locale]/professionals/page": "/[locale]/professionals",
-  "/[locale]/products/page": "/[locale]/products",
-  "/[locale]/page": "/[locale]",
   "/[locale]/method/page": "/[locale]/method",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/products/page": "/[locale]/products",
+  "/[locale]/professionals/page": "/[locale]/professionals",
   "/[locale]/story/page": "/[locale]/story"
 }
