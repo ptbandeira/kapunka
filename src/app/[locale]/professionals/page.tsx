@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import {
   Building,
   Flower2,
+  Spa,
   Hotel,
   Mail,
   Phone,
@@ -15,13 +16,13 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-export default function ProfessionalsPage({
+export default async function ProfessionalsPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
-  const { locale } = params;
+  const { locale } = await params;
 
   const professionalCategories = [
     {
