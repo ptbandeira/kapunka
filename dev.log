@@ -6,42 +6,10 @@
 > Ready on http://localhost:3000
 > Socket.IO server running at ws://localhost:3000/api/socketio
  ○ Compiling /middleware ...
- ✓ Compiled /middleware in 1187ms (137 modules)
+ ✓ Compiled /middleware in 1104ms (137 modules)
  ○ Compiling /[locale] ...
- ✓ Compiled /[locale] in 8.1s (907 modules)
- GET / 200 in 10923ms
+ ✓ Compiled /[locale] in 7.7s (907 modules)
+ GET /es 200 in 10298ms
  ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 652ms (580 modules)
- GET /favicon.ico 200 in 1091ms
- ○ Compiling /[locale]/story ...
- ✓ Compiled /[locale]/story in 1089ms (905 modules)
- GET /story 200 in 2457ms
- ✓ Compiled /favicon.ico in 420ms (591 modules)
- GET /favicon.ico 200 in 685ms
- ○ Compiling /[locale]/contact ...
- ✓ Compiled /[locale]/contact in 934ms (951 modules)
-Error: Route "/[locale]/contact" used `params.locale`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-    at ContactPage (src/app/[locale]/contact/page.tsx:14:10)
-  12 | }) {
-  13 |   const t = await getTranslations();
-> 14 |   const { locale } = params;
-     |          ^
-  15 |
-  16 |   const contactInfo = [
-  17 |     { icon: Mail, title: 'Email', value: 'info@kapunka.com', description: 'General inquiries and support' },
- GET /contact 200 in 1986ms
- GET /favicon.ico 200 in 22ms
- ○ Compiling /[locale]/professionals ...
- ✓ Compiled /[locale]/professionals in 958ms (960 modules)
- GET /professionals 200 in 2713ms
- GET /favicon.ico 200 in 11ms
- GET /es 200 in 253ms
- GET /favicon.ico 200 in 27ms
- ○ Compiling /[locale]/products ...
- ✓ Compiled /[locale]/products in 658ms (963 modules)
- GET /es/products 200 in 1893ms
- GET /favicon.ico 200 in 20ms
- GET /es 200 in 514ms
- GET /favicon.ico 200 in 9ms
- GET /es 200 in 229ms
- GET /favicon.ico 200 in 37ms
+ ✓ Compiled /favicon.ico in 531ms (580 modules)
+ GET /favicon.ico 200 in 695ms
