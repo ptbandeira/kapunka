@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useTranslations } from 'next-intl';
 import {
   Building,
+  Flower2,
   Spa,
   Hotel,
   Mail,
@@ -33,7 +34,7 @@ export default async function ProfessionalsPage({
       cta: 'Contact for Clinic Pricing'
     },
     {
-      icon: Spa,
+      icon: Flower2,
       title: t('professionals.spas.title'),
       description: t('professionals.spas.description'),
       features: t('professionals.spas.features'),
