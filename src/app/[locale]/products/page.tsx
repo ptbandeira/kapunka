@@ -2,16 +2,15 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Droplet, ArrowRight } from 'lucide-react';
 
 export default async function ProductsPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const t = useTranslations();
-  const { locale } = await params;
+  const t = await getTranslations();
 
   const products = [
     {

@@ -2,16 +2,16 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import ContactForm from './ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export default async function ContactPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const t = useTranslations();
-  const { locale } = await params;
+  const t = await getTranslations();
+  const { locale } = params;
 
   const contactInfo = [
     { icon: Mail, title: 'Email', value: 'info@kapunka.com', description: 'General inquiries and support' },

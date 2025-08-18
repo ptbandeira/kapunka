@@ -2,7 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import {
   Building,
   Flower2,
@@ -19,10 +19,9 @@ import {
 export default async function ProfessionalsPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const t = useTranslations();
-  const { locale } = await params;
+  const t = await getTranslations();
 
   const professionalCategories = [
     {
