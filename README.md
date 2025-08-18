@@ -79,8 +79,7 @@ kapunka-website/
 │   │   │   ├── professionals/ # Professionals page
 │   │   │   └── contact/      # Contact page
 │   │   ├── admin/            # Admin panel
-│   │   ├── layout.tsx        # Root layout (redirects to /en)
-│   │   └── globals.css       # Global styles
+│   │   └── layout.tsx        # Root layout (redirects to /en)
 │   ├── components/
 │   │   ├── layout/           # Layout components
 │   │   │   ├── Header.tsx
@@ -89,6 +88,8 @@ kapunka-website/
 │   ├── i18n/
 │   │   └── request.ts       # Internationalization config
 │   └── lib/                 # Utility functions
+├── styles/
+│   └── globals.css       # Global styles
 ├── messages/                # Translation files
 │   ├── en.json             # English
 │   ├── es.json             # Spanish
@@ -166,7 +167,7 @@ The admin panel provides a WordPress-like interface for managing website content
 
 ### Brand Colors
 
-To customize brand colors, edit the CSS variables in `src/app/globals.css`:
+To customize brand colors, edit the CSS variables in `styles/globals.css`:
 
 ```css
 :root {
