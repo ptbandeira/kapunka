@@ -3,6 +3,9 @@ import { getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }];
+}
 export const metadata: Metadata = {
   title: "Kapunka - Quiet care for sensitive skin",
   description: "Pure argan oil taught through a simple, disciplined method for sensitive skin care.",

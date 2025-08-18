@@ -6,6 +6,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    <html suppressHydrationWarning>
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         {children}
