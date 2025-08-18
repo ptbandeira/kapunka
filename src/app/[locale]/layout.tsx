@@ -3,6 +3,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, setRequestLocale} from 'next-intl/server';
 import {routing} from '../../i18n/routing';
 import {Toaster} from '@/components/ui/toaster';
+import IdentityRedirect from '@/components/IdentityRedirect';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -28,6 +29,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages} locale={locale}>
       {children}
       <Toaster />
+      <IdentityRedirect />
     </NextIntlClientProvider>
   );
 }
