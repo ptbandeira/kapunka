@@ -5,13 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useTranslations } from 'next-intl';
 import { Droplet, ArrowRight } from 'lucide-react';
 
-export default function ProductsPage({
+export default async function ProductsPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
-  const { locale } = params;
+  const { locale } = await params;
 
   const products = [
     {
