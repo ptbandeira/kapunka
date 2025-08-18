@@ -2,15 +2,15 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  Droplet, 
-  Hand, 
-  Touch, 
-  Move, 
-  Pause, 
-  Clock, 
-  Shield, 
-  CheckCircle 
+import {
+  Droplet,
+  Hand,
+  Pointer,
+  Move,
+  Pause,
+  Clock,
+  Shield,
+  CheckCircle
 } from 'lucide-react';
 
 export default function MethodPage({
@@ -34,7 +34,7 @@ export default function MethodPage({
       color: 'bg-[var(--kapunka-sage-medium)]'
     },
     {
-      icon: Touch,
+      icon: Pointer,
       title: t('method.steps.press.title'),
       description: t('method.steps.press.description'),
       color: 'bg-[var(--kapunka-taupe)]'
@@ -65,7 +65,7 @@ export default function MethodPage({
       description: 'Keep all tools and surfaces properly sanitized'
     },
     {
-      icon: Touch,
+      icon: Pointer,
       title: t('method.hygiene.keep_droppers'),
       description: 'Prevent contamination by keeping droppers away from direct skin contact'
     }
