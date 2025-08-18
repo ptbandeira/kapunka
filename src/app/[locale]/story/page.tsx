@@ -2,22 +2,23 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
-import { 
-  User, 
-  Heart, 
-  Leaf, 
-  Shield, 
-  Globe, 
+import {
+  User,
+  Heart,
+  Leaf,
+  Shield,
+  Globe,
   Scale,
   Quote
 } from 'lucide-react';
 
-export default function StoryPage({
+export default async function StoryPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
+  const { locale } = await params;
 
   const values = [
     {

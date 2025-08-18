@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import {
   Droplet,
   Hand,
-  Pointer,
   Move,
   Pause,
   Clock,
@@ -13,12 +12,13 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-export default function MethodPage({
+export default async function MethodPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const t = useTranslations();
+  const { locale } = await params;
 
   const steps = [
     {
