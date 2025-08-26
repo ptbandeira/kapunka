@@ -63,6 +63,13 @@ export default async function HomePage({
             </div>
           </div>
         </div>
+      <div className="mt-16 w-full">
+            <img
+              src="/images/hero.jpg"
+              alt="A lifestyle photo showing Kapunka argan oil in a serene setting"
+              className="w-full h-auto object-cover"
+            />
+      </div>  
       </section>
 
       {/* Features Section */}
