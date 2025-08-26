@@ -163,10 +163,12 @@
     }
   },
   "footer": {
+    "tagline": "Quiet strength. Pure care. Pure argan oil taught through a simple, disciplined method for sensitive skin.",
+    "quick_links": "Quick Links",
     "about": "About Kapunka",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact",
-    "copyright": "© 2024 Kapunka. All rights reserved."
+    "copyright": "© {year} Kapunka. All rights reserved."
   }
 }
