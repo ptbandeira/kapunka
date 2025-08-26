@@ -123,6 +123,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground leading-body font-light;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-heading tracking-tight;
+  }
+  small {
+    @apply tracking-caps;
   }
 }
