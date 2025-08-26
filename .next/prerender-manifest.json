@@ -1,1 +1,0 @@
-{"version":4,"routes":{"/en":{},"/es":{},"/pt":{}},"dynamicRoutes":{"/[locale]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"3aef6395a983597ca0c5bd6c08ff9d2e","previewModeSigningKey":"9a90dba7a7269a7a648aab299e10f0f83d5165208302605cc34fb7e5176146fa","previewModeEncryptionKey":"1101a9dffd870c9908dbac97c0d145b82e13bfbf4a078522b716df0c3403c914"}}
