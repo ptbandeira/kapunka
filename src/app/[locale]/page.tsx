@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Droplet, Hand, Leaf } from 'lucide-react';
 
 export default async function HomePage({
@@ -20,11 +21,14 @@ export default async function HomePage({
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <img
-          src="/images/IMG_20200328_170817-min.jpg"
+        <Image
+          src="/images/img_20200328_162420-copia-3-.jpg"
           alt="A lifestyle photo showing Kapunka argan oil in a serene setting"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          className="absolute inset-0 object-cover"
         />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative">
           <div className="space-y-8 max-w-xl">
             <div className="space-y-4">
