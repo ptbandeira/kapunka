@@ -37,6 +37,9 @@ This style guide documents the foundational design tokens and component standard
 - **Cards/Containers:** use unified border radii and shadow tokens.
 - **States:** loading, empty and error states should rely on semantic colors above.
 
+## Elevation
+- `shadow-elevation-1` through `shadow-elevation-5` provide layered shadow levels for component depth.
+
 ## Accessibility
 - All color combinations target WCAG AA (4.5:1) contrast.
 - Dark mode uses the same tokens with inverted foreground/background values.
