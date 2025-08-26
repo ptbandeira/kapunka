@@ -3,15 +3,15 @@
     "home": "Início",
     "products": "Produtos",
     "method": "O Método",
-    "story": "Nossa História",
+    "story": "A Nossa História",
     "professionals": "Profissionais",
-    "contact": "Contato"
+    "contact": "Contacto"
   },
   "home": {
     "hero": {
       "title": "Cuidado sereno para pele sensível",
       "subtitle": "Óleo de argão puro ensinado através de um método simples e disciplinado",
-      "description": "Kapunka oferece força silenciosa em uma garrafa. Óleo de argão de primeira prensagem, projetado para acalmar, suavizar e apoiar a barreira cutânea.",
+      "description": "Kapunka oferece força silenciosa num frasco. Óleo de argão de primeira prensagem, concebido para acalmar, suavizar e apoiar a barreira cutânea.",
       "cta": "Descubra o Método"
     },
     "features": {
@@ -29,34 +29,34 @@
       }
     },
     "products": {
-      "title": "Nossos Produtos",
+      "title": "Os Nossos Produtos",
       "subtitle": "Simples por escolha. Poderoso por natureza.",
-      "view_all": "Ver Todos os Produtos"
+      "view_all": "Ver todos os produtos"
     }
   },
   "products": {
-    "title": "Nossos Produtos",
+    "title": "Os Nossos Produtos",
     "subtitle": "Óleo de argão puro para conforto diário",
     "pure_argan_oil": {
       "name": "Óleo de Argão Puro",
-      "description": "100% óleo de argão de primeira prensagem em garrafa de vidro transparente",
+      "description": "100% óleo de argão de primeira prensagem em frasco de vidro transparente",
       "size": "30ml",
       "price": "€45",
-      "add_to_cart": "Adicionar ao Carrinho"
+      "add_to_cart": "Adicionar ao carrinho"
     },
     "professional_size": {
       "name": "Tamanho Profissional",
-      "description": "Garrafa recarregável de 100ml para uso em spa e clínica",
+      "description": "Frasco recarregável de 100ml para uso em spa e clínica",
       "size": "100ml",
       "price": "€120",
-      "add_to_cart": "Adicionar ao Carrinho"
+      "add_to_cart": "Adicionar ao carrinho"
     },
     "amenity_size": {
-      "name": "Amenidade de Hotel",
-      "description": "2ml tamanho perfeito para quartos de hotel e amostras",
+      "name": "Amenity de Hotel",
+      "description": "2ml, tamanho perfeito para quartos de hotel e amostras",
       "size": "2ml",
       "price": "€8",
-      "add_to_cart": "Adicionar ao Carrinho"
+      "add_to_cart": "Adicionar ao carrinho"
     }
   },
   "method": {
@@ -93,7 +93,7 @@
     }
   },
   "story": {
-    "title": "Nossa História",
+    "title": "A Nossa História",
     "subtitle": "Força silenciosa. Cuidado puro.",
     "founder": {
       "title": "Fundadora: Mónica Ruiz",
@@ -105,7 +105,7 @@
       "description": "Kapunka representa uma abordagem suave mas resiliente do cuidado da pele, entregando força e resultados de forma tranquila e calma, com ingredientes puros e métodos de cuidado."
     },
     "values": {
-      "title": "Nossos Valores",
+      "title": "Os Nossos Valores",
       "purity": "Pureza e Simplicidade: As formulações e mensagens permanecem puras, naturais e sem complicações.",
       "craft": "Artesanato e Origem: Honrar a produção artesanal e a origem do nosso óleo de argão.",
       "dignity": "Dignidade e Respeito: Tratar o cliente, a cultura e a pele com respeito.",
@@ -143,30 +143,32 @@
         "Linhas de menu de spa co-branded"
       ]
     },
-    "contact": "Entre em contato para preços profissionais e treinamento"
+    "contact": "Contacte-nos para preços profissionais e formação"
   },
   "contact": {
-    "title": "Entre em Contato",
+    "title": "Contacte-nos",
     "subtitle": "Estamos aqui para ajudar",
     "form": {
       "name": "Nome",
       "email": "Email",
       "subject": "Assunto",
       "message": "Mensagem",
-      "send": "Enviar Mensagem"
+      "send": "Enviar mensagem"
     },
     "info": {
-      "title": "Entre em Contato",
+      "title": "Entre em contacto",
       "email": "Email: info@kapunka.com",
       "phone": "Telefone: +34 900 000 000",
-      "address": "Endereço: Calle Principal 1, Madrid, Espanha"
+      "address": "Morada: Calle Principal 1, Madrid, Espanha"
     }
   },
   "footer": {
-    "about": "Sobre Kapunka",
+    "tagline": "Força silenciosa. Cuidado puro. Óleo de argão puro ensinado através de um método simples e disciplinado para pele sensível.",
+    "quick_links": "Ligações rápidas",
+    "about": "Sobre a Kapunka",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço",
-    "contact": "Contato",
-    "copyright": "© 2024 Kapunka. Todos os direitos reservados."
+    "contact": "Contacto",
+    "copyright": "© {year} Kapunka. Todos os direitos reservados."
   }
 }

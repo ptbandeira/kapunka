@@ -163,10 +163,12 @@
     }
   },
   "footer": {
+    "tagline": "Fuerza silenciosa. Cuidado puro. Aceite de argán puro enseñado mediante un método simple y disciplinado para pieles sensibles.",
+    "quick_links": "Enlaces rápidos",
     "about": "Acerca de Kapunka",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
     "contact": "Contacto",
-    "copyright": "© 2024 Kapunka. Todos los derechos reservados."
+    "copyright": "© {year} Kapunka. Todos los derechos reservados."
   }
 }
