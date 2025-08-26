@@ -46,6 +46,13 @@ const config: Config = {
                         lg: "12px",
                         xl: "16px"
                 },
+                boxShadow: {
+                        'elevation-1': '0 1px 2px rgba(22,19,19,0.04)',
+                        'elevation-2': '0 2px 4px rgba(22,19,19,0.04), 0 1px 2px rgba(22,19,19,0.04)',
+                        'elevation-3': '0 4px 8px rgba(22,19,19,0.06), 0 2px 4px rgba(22,19,19,0.06)',
+                        'elevation-4': '0 8px 16px rgba(22,19,19,0.08), 0 4px 8px rgba(22,19,19,0.06)',
+                        'elevation-5': '0 12px 24px rgba(22,19,19,0.1), 0 8px 16px rgba(22,19,19,0.08)'
+                },
                 colors: {
                         background: 'hsl(var(--background))',
                         foreground: 'hsl(var(--foreground))',
