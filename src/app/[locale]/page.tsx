@@ -21,7 +21,7 @@ export default async function HomePage({
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <img
-          src="/images/img_20200328_161249-copia.jpg"
+          src="images/IMG_20200328_170817-min.jpg"
           alt="A lifestyle photo showing Kapunka argan oil in a serene setting"
           className="absolute inset-0 w-full h-full object-cover"
         />
