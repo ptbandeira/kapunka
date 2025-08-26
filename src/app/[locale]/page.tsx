@@ -19,57 +19,40 @@ export default async function HomePage({
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  {t('home.hero.title')}
-                </h1>
-                <p className="text-xl text-muted-foreground">
-                  {t('home.hero.subtitle')}
-                </p>
-                <p className="text-lg text-muted-foreground max-w-lg">
-                  {t('home.hero.description')}
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-[var(--kapunka-sage-medium)] hover:bg-[var(--kapunka-sage-medium)]/90">
-                  <Link href={`/${locale}/method`}>
-                    {t('home.hero.cta')}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href={`/${locale}/products`}>
-                    {t('navigation.products')}
-                  </Link>
-                </Button>
-              </div>
+      <section className="relative overflow-hidden">
+        <img
+          src="/images/img_20200328_161249-copia.jpg"
+          alt="A lifestyle photo showing Kapunka argan oil in a serene setting"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative">
+          <div className="space-y-8 max-w-xl">
+            <div className="space-y-4">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                {t('home.hero.title')}
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                {t('home.hero.subtitle')}
+              </p>
+              <p className="text-lg text-muted-foreground max-w-lg">
+                {t('home.hero.description')}
+              </p>
             </div>
-
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-[var(--kapunka-sage-light)] to-[var(--kapunka-sage-medium)] rounded-full flex items-center justify-center">
-                <div className="w-4/5 h-4/5 bg-background rounded-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="h-16 w-16 mx-auto mb-4 bg-[var(--kapunka-taupe)] rounded-full flex items-center justify-center">
-                      <Droplet className="h-8 w-8 text-white" />
-                    </div>
-                    <p className="text-sm font-medium text-muted-foreground">Pure Argan Oil</p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-[var(--kapunka-sage-medium)] hover:bg-[var(--kapunka-sage-medium)]/90">
+                <Link href={`/${locale}/method`}>
+                  {t('home.hero.cta')}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href={`/${locale}/products`}>
+                  {t('navigation.products')}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
-      <div className="mt-16 w-full">
-            <img
-              src="/images/hero.jpg"
-              alt="A lifestyle photo showing Kapunka argan oil in a serene setting"
-              className="w-full h-auto object-cover"
-            />
-      </div>  
       </section>
 
       {/* Features Section */}
